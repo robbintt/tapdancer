@@ -10,6 +10,11 @@ Small flask health check service.
 - FaaS or container (dockerized locally vs. zappa + aws lambda)
 - Web view
 
+## Future: ASGI && (FastAPI || Starlette directly)
+
+- ASGI is much faster, 8x faster. Move towards these frameworks: https://github.com/tiangolo/uwsgi-nginx-flask-docker (also see sections on k8s replication differences.
+- FastAPI replication guide: https://fastapi.tiangolo.com/deployment/docker/#replication-number-of-processes
+
 ## Resources
 
 - https://pypi.org/project/py-healthcheck/
