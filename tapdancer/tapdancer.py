@@ -3,13 +3,16 @@ from healthcheck import HealthCheck, EnvironmentDump
 
 app = Flask(__name__)
 
+app.debug = True
+#app.secret_key = 'development key'
+
 health = HealthCheck()
 envdump = EnvironmentDump()
 
 # add your own check function to the healthcheck
 def redis_available():
-    client = _redis_client()
-    info = client.info()
+    #client = _redis_client()
+    #info = client.info()
     return True, "redis ok"
 
 health.add_check(redis_available)
