@@ -33,3 +33,6 @@ RUN pyenv exec pipenv sync
 # app setup
 RUN mkdir -p /run/uwsgi
 COPY uwsgi.ini /app/uwsgi.ini
+
+# socket for nginx reverse proxy (also update in run.sh)
+RUN mkdir -p /var/run/nginx_sidecar

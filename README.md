@@ -10,6 +10,12 @@ Small flask health check service.
 - FaaS or container (dockerized locally vs. zappa + aws lambda)
 - Web view
 
+## Todos
+
+- switch to 8080 for proxying as it is the traditional usage of the port
+- tune uwsgi: https://uwsgi-docs.readthedocs.io/en/latest/ThingsToKnow.html
+
+
 ## Future: ASGI && (FastAPI || Starlette directly)
 
 - ASGI is much faster, 8x faster. Move towards these frameworks: https://github.com/tiangolo/uwsgi-nginx-flask-docker (also see sections on k8s replication differences.
